@@ -1,0 +1,37 @@
+form {
+    border-radius: 10px;
+    background-color: #383842;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input {
+    height: 45%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  /* GLOW EFFECT TO INPUT IF IS IN FOCUS */
+input:focus {
+    outline: none;
+    border-color: #E27B6A;
+    box-shadow: 0 0 5px #E27B6A;
+}
+
+.btn {
+    font-size: 20px;
+    background-color: #E27B6A;
+    color: #111;
+    font-weight: 500;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.btn:hover {
+    background-color: #d45e4b;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-5">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input required type="text" class="form-control" id="title" formControlName="title">
+      </div>
+      <div class="mb-3">
+        <label for="body" class="form-label">Body</label>
+        <textarea required minlength="100" maxlength="400" formControlName="body" id="body" cols="30" rows="10" class="form-control"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="img_url" class="form-label">Image URL</label>
+        <input required formControlName="imgUrl" type="text" class="form-control" id="img_url">
+      </div>
+      <div class="mb-3">
+        <label for="user_id" class="form-label">User ID</label>
+        <input required formControlName="userID" type="number" class="form-control" id="user_id">
+      </div>
+      <div class="mb-3">
+        <label for="tags" class="form-label">Tags</label><br />
+        <small>Separati da una virgola</small>
+        <input required [pattern]="tagsPattern" formControlName="tags" type="text" class="form-control" id="tags">
+        <div *ngIf="tagss?.errors?.['tagsPattern']">Tags non rispettano la forma indicata</div>
+      </div>
+      <div class="mb-3">
+        <label for="reactions" class="form-label">Reactions</label>
+        <input required formControlName="reactions" type="number" class="form-control" id="reactions">
+      </div>
+      <button [disabled]="form.invalid" type="submit" class="btn btn-lg mt-2">Submit</button>
+    </form>
+  </div>
