@@ -1,10 +1,6 @@
-.home {
-    font-size: 22px;
-    color: #383842;
-    font-weight: 700;
-}
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
-.btn {
+.cta {
     background-color: #383842;
     color: aliceblue;
     font-family: 'Satisfy', cursive;
@@ -15,22 +11,11 @@
     transition: all 0.4s;
 }
 
-.btn:hover {
+.cta:hover {
     background-color: #E27B6A;
     color: #111;
     font-weight: 500;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
-}
-
-.navbar {
-    background-color: #fefefe6d;
-}
-
-@media (max-width: 576px) { 
-    .logo {
-        width: 64px;
-        height: 64px;
-    }
- }
+  }

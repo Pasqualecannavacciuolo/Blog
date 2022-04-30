@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+:root {
+    --bg-color: #F9CD8F;
+    --orange-coral-color: #E27B6A;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Quicksand', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+}

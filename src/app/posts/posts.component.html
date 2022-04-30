@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <div class="filters-wrapper mb-3">
+    <h5 class="filter-title">Filtra i contenuti</h5>
+    <button (click)="reset()" class="reset p-2">Reset Filters</button>
+    <button *ngFor="let tag of uniqueTags" class="btn-dark m-2" (click)="getValue(tag)">#{{tag}}</button>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let post of filterContent">
+        <div class="card h-100">
+          <img src="{{ post.imgUrl }}" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.body | slice: 0:100 }}...</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <span class="badge me-1 mt-2" *ngFor="let tag of post.tags">
+                #{{ tag }}
+              </span>
+            </small>
+            <small class="text-muted">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#E27B6A"
+                class="bi bi-heart-fill mt-1 ms-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+              </svg>
+              {{ post.reactions }}
+            </small>
+            <button [routerLink]="['/post/', post.id]" class="btn float-end">Dettagli</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

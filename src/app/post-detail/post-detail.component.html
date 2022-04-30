@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="d-md-flex flex-md-equal w-100 my-md-5 ps-md-5 post-container">
+    <div class="me-md-3 mt-3 blog-img">
+      <div class="my-3 py-3">
+        <img src="{{post?.imgUrl}}">
+      </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">{{ post?.title }}</h2>
+        <p class="lead">{{ post?.body }}</p>
+      </div>
+      <button [routerLink]="['/posts/']" class="btn btn-warning">Back to Post List</button>
+    </div>
+  </div>
+</div>
